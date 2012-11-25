@@ -12,9 +12,7 @@ This is a plugin version of Dan Cederholm's Pears WordPress theme, for use on ex
 
 == Description ==
 
-This WordPress plugin is based on the Pears WordPress theme by Dan Cederholm, which is distributed under the GPLv2 license. 
-
-It uses a 'pears' custom post type and a 'pattern category' taxonomy to keep all patterns separate from existing site content, enabling users to create a simple pattern library on an existing website or blog.
+This WordPress plugin is based on the Pears WordPress theme by Dan Cederholm, which is distributed under the GPLv2 license. It uses a 'pears' custom post type and a 'pattern category' taxonomy to keep all patterns separate from existing site content, enabling users to create a simple pattern library on an existing website or blog.
 
 
 = ORIGINAL README BY DAN CEDERHOLM =
