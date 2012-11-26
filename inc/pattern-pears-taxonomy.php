@@ -9,7 +9,7 @@ function pattern_pears_register_taxonomies() {
         'query_var'     => 'pattern_category',
         'show_tagcloud' => true,
         'rewrite'       => array(
-            'slug'          =>  'pears/pattern_category',
+            'slug'          =>  'pattern-category',
             'with_front'    =>  false
         ),
         'labels'        => array(

@@ -31,7 +31,7 @@ get_header(); ?>
                 <div id="pattern" class="mod group">
                     <h3 class="label">Pattern</h3> 
                     
-                    <h4><?php the_category(' '); ?> <span class="sep">&rarr;</span> <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                    <h4><?php the_category(' '); ?> <span class="sep">&rarr;</span> <?php the_title(); ?></h4>
                     
                     <div id="pattern-wrap" class="group">
                         <?php 
@@ -40,6 +40,25 @@ get_header(); ?>
                         ?>
                     </div>
                 </div>
+        
+                <div class="group">
+                    <div id="markup" class="mod">
+                        <h3 class="label">HTML</h3> <a href="#" class="clip" title="select code for copying"><img src="<?php echo plugins_url( '/images/icon-copy.png' , dirname(__FILE__) ); ?>" alt="copy" /></a>
+                        <textarea class="mod-ta"><?php $key = "html"; echo get_post_meta( $post_id, $key, true ); ?></textarea>
+                    </div>
+                    
+                    <div id="style" class="mod">
+                        <h3 class="label">CSS</h3> <a href="#" class="clip" title="select code for copying"><img src="<?php echo plugins_url( '/images/icon-copy.png' , dirname(__FILE__) ); ?>" alt="copy" /></a>
+                        <textarea id="css-code" class="mod-ta"><?php $key = "css"; echo get_post_meta( $post_id, $key, true ); ?></textarea>
+                    </div>
+                </div>
+        
+                <?php if( $post->post_content != "" ) : ?>
+                <div id="pattern-notes" class="mod">
+                    <h3 class="label">Notes</h3>
+                    <?php the_content(); ?>
+                </div>
+                <?php endif; ?>
         
                 <div class="nav">
                     <?php require_once( plugin_dir_path( __FILE__ ) .'/pattern-pears-menu.php' ); ?>

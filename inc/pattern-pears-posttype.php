@@ -14,8 +14,9 @@ function pattern_pears_posttype_init() {
     $pears_args = array(
         'public'    => true,
         'query_var' => 'pattern_pear',
+        'has_archive' => true,
         'rewrite'   => array(
-            'slug'          => 'patterns/pear',
+            'slug'          => 'pears',
             'with_front'    => false
         ),
         'supports'  => array(

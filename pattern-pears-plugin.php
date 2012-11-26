@@ -66,13 +66,21 @@ add_action('template_redirect', 'pattern_pears_set_template');
 
 function pattern_pears_set_template() {
     
+    $template_single_path = plugin_dir_path( __FILE__ ) . '/inc/pattern-pears-template-single.php';
     $template_path = plugin_dir_path( __FILE__ ) . '/inc/pattern-pears-template.php';
     
     if ( get_post_type() == 'pattern_pear' ) {
         
-        if( file_exists( $template_path ) ){
-            include( $template_path );
-            exit;
+        if ( is_singular() ) {
+            if( file_exists( $template_single_path ) ) {
+                include( $template_single_path );
+                exit;
+            }
+        } else {
+            if( file_exists( $template_path ) ) {
+                include( $template_path );
+                exit;
+            }
         }
         
     }
